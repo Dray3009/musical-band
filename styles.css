@@ -1,0 +1,508 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.main-content {
+  flex: 1;
+  position: relative;
+  min-height: 1000px;
+  background-color: #212122;
+}
+
+.primary_nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2 auto;
+  padding: 1rem;
+}
+
+.logo {
+  height: 120px;
+  width: 120px;
+  margin: 3rem;
+  padding: 24px;
+}
+
+.nav_list {
+  display: flex;
+  column-gap: 60px;
+  list-style: none;
+  padding-right: 5rem;
+  margin: 0;
+}
+.nav_item {
+  text-decoration: none;
+}
+
+.nav_link {
+  text-decoration: none;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  font-size: 20px;
+  position: relative;
+}
+
+.nav_link::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #db324d;
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  opacity: 0;
+  transition: all 0.5s;
+  pointer-events: none;
+}
+.nav_link:hover::after {
+  opacity: 1;
+}
+.mobile {
+  display: none;
+}
+@media screen and (max-width: 940px) {
+  .nav_list {
+    flex-direction: column;
+    left: -100%;
+    top: 80px;
+    position: fixed;
+    background-color: #212122;
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.3s;
+    padding-top: 1rem;
+  }
+  .nav_list.active {
+    left: 0;
+  }
+
+  .nav_list li {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  .mobile {
+    display: block;
+    font-size: 50px;
+    color: orangered;
+    cursor: pointer;
+  }
+
+  .mobile:hover i {
+    color: #db324d;
+  }
+  .logo {
+    height: 80px;
+    width: 80px;
+    margin: 1rem;
+    padding: 8px;
+  }
+}
+
+.icon-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+  margin: 3rem;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.icon-bar a {
+  color: tomato;
+}
+.tidal::after {
+  content: url("https://api.iconify.design/cib/tidal.svg?height=24&color=tomato");
+}
+
+.audio-mack::after {
+  content: url("https://api.iconify.design/simple-icons/audiomack.svg?height=24&color=tomato");
+}
+@media screen and (max-width: 680px) {
+  .logo {
+    height: 80px;
+    width: 80px;
+    margin: 1rem;
+    padding: 8px;
+  }
+  th {
+    display: none;
+  }
+  td {
+    display: grid;
+    gap: 0.2rem;
+    grid-template-columns: 12ch auto;
+    padding: 0.75rem 1rem;
+  }
+  td :first-child {
+    padding-top: 2rem;
+  }
+
+  td :last-child {
+    padding-bottom: 2rem;
+  }
+
+  td::before {
+    content: attr(data-cell) " ";
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .emojione--admission-tickets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6rem;
+  }
+}
+
+.c-item {
+  height: 100vh;
+}
+.c-img {
+  height: 50%;
+  object-fit: contain;
+}
+
+.carousel-item {
+  height: 100vh;
+}
+
+#Tour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #212122;
+}
+.tour {
+  text-align: center;
+  color: #a29c9b;
+  padding: 20px;
+}
+
+.tourHeading {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 3px 3px 0 #db324d, -3px 3px 0 #db324d, -3px -3px 0 #db324d,
+    3px -3px 0 #db324d;
+  padding: 10px;
+}
+.vipHeading,
+.noto--admission-tickets {
+  margin: 15px;
+  cursor: pointer;
+}
+
+.vipHeading {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vip {
+  align-items: center;
+}
+
+.noto--admission-tickets {
+  display: flex;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 10px;
+  transform: rotate(30deg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='%23ED6C66' d='M123.77 41.59c.08 0 .15.01.23.01v-3.46h-3.45c-4.31 0-7.9-3.06-8.72-7.13a2.205 2.205 0 0 0-2.16-1.77H18.33c-1.05 0-1.95.74-2.16 1.77a8.895 8.895 0 0 1-8.72 7.13H4v3.46c.08-.01.15-.01.23-.01a2.77 2.77 0 1 1 0 5.54c-.08 0-.15-.01-.23-.01v2.33c.08-.01.15-.01.23-.01a2.77 2.77 0 1 1 0 5.54c-.08 0-.15-.01-.23-.01v2.33c.08-.01.15-.01.23-.01C5.76 57.3 7 58.54 7 60.07a2.77 2.77 0 0 1-2.77 2.77c-.08 0-.15-.01-.23-.01v2.33c.08-.01.15-.01.23-.01C5.76 65.15 7 66.4 7 67.93S5.76 70.7 4.23 70.7c-.08 0-.15-.01-.23-.01v2.33c.08-.01.15-.01.23-.01a2.77 2.77 0 1 1 0 5.54c-.08 0-.15-.01-.23-.01v2.33c.08-.01.15-.01.23-.01a2.77 2.77 0 1 1 0 5.54c-.08 0-.15-.01-.23-.01v3.46h3.45c4.31 0 7.9 3.06 8.72 7.13a2.205 2.205 0 0 0 2.16 1.77h91.34c1.05 0 1.95-.74 2.16-1.77a8.895 8.895 0 0 1 8.72-7.13H124V86.4c-.08.01-.15.01-.23.01a2.77 2.77 0 1 1 0-5.54c.08 0 .15.01.23.01v-2.33c-.08.01-.15.01-.23.01a2.77 2.77 0 1 1 0-5.54c.08 0 .15.01.23.01V70.7c-.08.01-.15.01-.23.01a2.77 2.77 0 1 1 0-5.54c.08 0 .15.01.23.01v-2.33c-.08.01-.15.01-.23.01a2.77 2.77 0 1 1 0-5.54c.08 0 .15.01.23.01V55c-.08.01-.15.01-.23.01a2.77 2.77 0 1 1 0-5.54c.08 0 .15.01.23.01v-2.33c-.08.01-.15.01-.23.01a2.77 2.77 0 0 1-2.77-2.77c0-1.56 1.24-2.8 2.77-2.8'/%3E%3Cpath fill='none' stroke='%23BB303D' stroke-miterlimit='10' stroke-width='3' d='M104.4 89.47H23.6c-2.82 0-5.11-2.29-5.11-5.11V43.64c0-2.82 2.29-5.11 5.11-5.11h80.8c2.82 0 5.11 2.29 5.11 5.11v40.72c0 2.82-2.29 5.11-5.11 5.11z'/%3E%3Cpath fill='none' stroke='%23BB303D' stroke-miterlimit='10' stroke-width='2' d='M35.87 38.53h56.27v50.95H35.87z'/%3E%3Cpath fill='none' stroke='%234E342E' stroke-linecap='round' stroke-miterlimit='10' stroke-width='9' d='M47.67 55.3h32.66m-27.9 17.4h23.14' opacity='.8'/%3E%3Cpath fill='none' stroke='%234E342E' stroke-miterlimit='10' stroke-width='6' d='M100.53 47.2v33.6M27.47 47.2v33.6' opacity='.5'/%3E%3C/svg%3E");
+}
+
+#Music {
+  background-color: #212122;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.Music {
+  text-align: center;
+  color: #a29c9b;
+  padding: 50px;
+}
+
+.album-section {
+  display: flex;
+  padding: 50px;
+}
+.album-art {
+  max-width: 500px;
+  height: auto;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.album-text {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.album-name {
+  font-size: 28px;
+  color: #db324d;
+  text-transform: uppercase;
+}
+
+.stream-text {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.stream-link {
+  color: #a29c9b;
+  text-decoration: none;
+  font-size: 20px;
+}
+.musicheading {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 3px 3px 0 #db324d, -3px 3px 0 #db324d, -3px -3px 0 #db324d,
+    3px -3px 0 #db324d;
+  padding: 10px;
+}
+
+/* table  */
+
+.tables {
+  width: 100%;
+  border-collapse: collapse;
+  background: #212122;
+  color: #db324d;
+  padding: 1rem;
+  caption-side: top;
+}
+
+.caption {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 3px 3px 0 #db324d, -3px 3px 0 #db324d, -3px -3px 0 #db324d,
+    3px -3px 0 #db324d;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+th,
+td,
+caption {
+  padding: 2rem;
+}
+
+th {
+  color: #a29c9b;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+tr:nth-of-type(2n) {
+  background: hsl(0 0% 0% / 0.1);
+}
+.emojione--admission-tickets {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3Cpath id='emojioneAdmissionTickets0' d='m25.4 54.8l30.4-25.5c-1.5-1.8-1.7-4.1-.9-6.1c-2.4-.1-4.5-1.6-5.4-3.9L12.2 32.8c1.1 3.1-.5 6.5-3.6 7.7l2.3 6.4l6 7.2c2.6-2.2 6.3-1.8 8.5.7'/%3E%3C/defs%3E%3Cpath fill='%23fbbf67' d='m64 41.7l-.9-2.5c-.7.3-1.5-.1-1.7-.8c-.3-.7.1-1.5.8-1.7l-1-2.7c-.7.3-1.5-.1-1.7-.8c-.3-.7.1-1.5.8-1.7l-.9-2.5c-.7.3-1.5-.1-1.7-.8c-.3-.7.1-1.5.8-1.7l-.9-2.5c-.7.2-1.4-.1-1.7-.7c-2.7.3-5.4-1.2-6.3-3.9L12.2 32.8c1.1 3.1-.5 6.5-3.6 7.7l7.3 19.9c3.1-1.1 6.5.5 7.7 3.6l37.3-13.6c-1-2.7.1-5.6 2.4-7.1c-.3-.6 0-1.4.7-1.6'/%3E%3Cpath fill='%23f55' d='M56.6 46.7L24.4 58.4c-1.7.6-3.6-.3-4.3-2l-5.7-15.7c-.6-1.7.3-3.6 2-4.3l32.2-11.7c1.7-.6 3.6.3 4.3 2l5.7 15.7c.6 1.8-.3 3.7-2 4.3M17 38.1c-.9.3-1.3 1.3-1 2.1l5.7 15.7c.3.9 1.3 1.3 2.1 1L56 45.2c.9-.3 1.3-1.3 1-2.1l-5.7-15.7c-.3-.9-1.3-1.3-2.1-1z'/%3E%3Cpath fill='%2389664c' d='m30.9 43.1l-.9.3c-.1 0-.2 0-.2-.1l-.5-1l-.6.2l.3 1.1c0 .1 0 .2-.1.2l-.9.3c-.1 0-.1 0-.2-.1l-1.7-6.9c0-.1 0-.2.1-.2l1.3-.5c.1 0 .2 0 .2.1l3.2 6.4c.1.1.1.2 0 .2m-2.1-1.9l-1.2-2.6h-.1l.8 2.7zm4-4.1l1.2 3.4c.2.7-.1 1.4-.8 1.7l-1.5.5c-.1 0-.2 0-.2-.1l-2-5.6c0-.1 0-.2.1-.2l1.5-.5c.7-.2 1.5.1 1.7.8m-1.1.5c0-.1-.2-.2-.3-.2l-.4.1l1.4 3.8l.3-.1c.1 0 .2-.2.1-.3zm5.3-3.3l2.1 5.6c0 .1 0 .2-.1.2l-.9.3c-.1 0-.2 0-.2-.1l-1-2.6l.2 2.6c0 .1-.1.1-.1 0l-1.5-2.1l1 2.6c0 .1 0 .2-.1.2l-.9.3c-.1 0-.2 0-.2-.1l-2.1-5.6c0-.1 0-.2.1-.2l.8-.3c.1 0 .2 0 .2.1l1.9 2.8l-.3-3.3c0-.1 0-.2.1-.2l.8-.3c.1 0 .2 0 .2.1m4.1 4.9c0 .1 0 .2-.1.2l-.9.3c-.1 0-.2 0-.2-.1l-2-5.6c0-.1 0-.2.1-.2l.9-.3c.1 0 .2 0 .2.1zm1.5-6.9l.3.9c0 .1 0 .2-.1.2l-.7.3l1.7 4.6c0 .1 0 .2-.1.2l-.9.3c-.1 0-.2 0-.2-.1L41 34l-.7.3c-.1 0-.2 0-.2-.1l-.3-.9c0-.1 0-.2.1-.2l2.5-.9c.1 0 .2 0 .2.1m-6.9 18l-.4.1c-.7.2-1.4-.1-1.7-.8L32 45c-.2-.7.1-1.4.8-1.7l.4-.1c.7-.2 1.4.1 1.7.8l1.7 4.6c.2.6-.2 1.4-.9 1.7m-2.3-6c-.2.1-.3.2-.2.4l1.6 4.5c0 .1.2.2.3.1h.1c.1 0 .2-.2.2-.3l-1.6-4.5c-.1-.2-.3-.2-.4-.2m5.4-1.8l2.1 5.6c0 .1 0 .2-.1.2l-.6.2c-.1 0-.2 0-.2-.1l-2-2.2l.9 2.6c0 .1 0 .2-.1.2l-.9.3c-.1 0-.2 0-.2-.1l-2.1-5.6c0-.1 0-.2.1-.2l.7-.2c.1 0 .2 0 .2.1l2.1 2.5l-1-2.9c0-.1 0-.2.1-.2l.9-.3s.1 0 .1.1m5 3.6l.3.9c0 .1 0 .2-.1.2l-2.1.8c-.1 0-.2 0-.2-.1l-2.1-5.6c0-.1 0-.2.1-.2l2.1-.8c.1 0 .2 0 .2.1l.3.9c0 .1 0 .2-.1.2l-1.1.4l.4 1.1l1-.4c.1 0 .2 0 .2.1l.3.9c0 .1 0 .2-.1.2l-1 .4l.5 1.3l1.1-.4c.2-.1.3-.1.3 0'/%3E%3Cg fill='%23947151' opacity='.5'%3E%3Cuse href='%23emojioneAdmissionTickets0'/%3E%3Cuse href='%23emojioneAdmissionTickets0' opacity='.5'/%3E%3C/g%3E%3Cpath fill='%23fbbf67' d='M52.5 16.1L50.8 14c-.6.5-1.4.4-1.9-.2c-.5-.6-.4-1.4.2-1.9l-1.7-2.1c-.6.5-1.4.4-1.9-.2c-.5-.6-.4-1.4.2-1.9L44 5.6c-.6.5-1.4.4-1.9-.2c-.7-.4-.6-1.2-.1-1.7l-1.7-2.1c-.6.5-1.4.4-1.9-.1C36 2.7 33 2.2 31.1 0L.7 25.5c2.2 2.6 1.8 6.4-.7 8.5l13.6 16.3c2.5-2.1 6.3-1.8 8.4.7l30.4-25.5c-1.8-2.2-1.8-5.3-.2-7.5c-.3-.6-.2-1.4.3-1.9'/%3E%3Cpath fill='%23f55' d='M47.2 23.4L21 45.4c-1.4 1.2-3.5 1-4.7-.4L5.6 32.2c-1.2-1.4-1-3.5.4-4.7l26.2-22c1.4-1.2 3.5-1 4.7.4l10.7 12.8c1.2 1.4 1 3.5-.4 4.7M7.1 28.8c-.7.6-.8 1.6-.2 2.3L17.6 44c.6.7 1.6.8 2.3.2l26.2-22c.7-.6.8-1.6.2-2.3L35.6 7c-.6-.7-1.6-.8-2.3-.2z'/%3E%3Cpath fill='%2389664c' d='m21.9 28.8l-.7.6c-.1.1-.2 0-.2 0l-.8-.8l-.6.4l.7.9v.2l-.7.6c-.1.1-.1 0-.2 0l-3.9-5.9v-.2l1.1-.9c.1-.1.2-.1.2 0l5.1 4.9zm-2.6-1.1l-2-2.1l-.1.1l1.7 2.3zm2.3-5.2l2.3 2.8c.5.6.4 1.4-.2 1.9l-1.2 1c-.1.1-.2 0-.2 0l-3.9-4.6c-.1-.1 0-.2 0-.2l1.2-1c.7-.5 1.5-.5 2 .1m-.9.8c-.1-.1-.3-.1-.4 0l-.3.2l2.6 3.1l.3-.2c.1-.1.1-.2 0-.4zm3.9-4.9l3.9 4.6c.1.1 0 .2 0 .2l-.8.6c-.1.1-.2 0-.2 0l-1.8-2.1l1.1 2.4c0 .1 0 .1-.1.1l-2.1-1.5l1.8 2.1c.1.1 0 .2 0 .2l-.8.6c-.1.1-.2 0-.2 0L21.5 21c-.1-.1 0-.2 0-.2l.7-.6c.1-.1.2 0 .2 0l2.7 1.9l-1.4-3v-.2l.7-.6c.1.1.2.1.2.1m5.6 3.2c.1.1 0 .2 0 .2l-.7.6c-.1.1-.2 0-.2 0l-3.9-4.6c-.1-.1 0-.2 0-.2l.7-.6c.1-.1.2 0 .2 0zm-1-7l.6.7c.1.1 0 .2 0 .2l-.6.5l3.2 3.8c.1.1 0 .2 0 .2l-.7.6h-.2l-3.2-3.8l-.6.5c-.1.1-.2 0-.2 0l-.6-.7c-.1-.1 0-.2 0-.2l2.1-1.7c0-.1.1-.1.2-.1m-.3 19.3l-.3.3c-.6.5-1.4.4-1.9-.2l-3.1-3.7c-.5-.6-.4-1.4.2-1.9l.3-.3c.6-.5 1.4-.4 1.9.2l3 3.7c.5.6.4 1.4-.1 1.9m-4.3-4.8c-.2.1-.2.3-.1.4l3.1 3.6c.1.1.2.1.4 0l.1-.1c.1-.1.1-.3 0-.4L25 29.1c-.1-.1-.3-.1-.4 0m4.5-3.6l3.9 4.6c.1.1 0 .2 0 .2l-.5.4c-.1.1-.2.1-.2 0l-2.6-1.4l1.8 2.1c.1.1 0 .2 0 .2l-.7.6c-.1.1-.2 0-.2 0l-3.9-4.6c-.1-.1 0-.2 0-.2l.5-.4c.1-.1.2-.1.2 0l2.8 1.6l-2-2.3c-.1-.1 0-.2 0-.2l.7-.6zm5.9 1.7l.6.7c.1.1 0 .2 0 .2l-1.7 1.5c-.1.1-.2 0-.2 0L29.8 25c-.1-.1 0-.2 0-.2l1.7-1.5c.1-.1.2 0 .2 0l.6.7c.1.1 0 .2 0 .2l-.9.8l.8.9l.8-.7c.1-.1.2 0 .2 0l.6.7c.1.1 0 .2 0 .2l-.8.7l.9 1.1l.9-.8c.1 0 .2 0 .2.1'/%3E%3C/svg%3E");
+}
+/* Community */
+
+.form-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #212122;
+}
+.form-container {
+  background-color: #db324d;
+  width: 420px;
+  position: relative;
+  border-radius: 20px;
+  padding: 30px 20px;
+}
+
+.form-container h1 {
+  font-size: 36px;
+  text-align: center;
+  color: #162c3e;
+}
+
+.input-box {
+  position: relative;
+  height: 80px;
+  width: 100%;
+  border-bottom: 2px solid #162c3e;
+  margin: 20px 0;
+}
+
+.input-box input {
+  position: relative;
+  padding: 0px, 35px, 0px, 5px;
+  top: 50px;
+  left: 5px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.input-box input::placeholder {
+  color: #96acbe;
+}
+
+.input-box i {
+  position: absolute;
+  color: #162c3e;
+  right: 12px;
+  line-height: 100px;
+}
+
+.form-container textarea {
+  width: 380px;
+  height: 220px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.text-box {
+  text-align: center;
+  padding: 2px, 2px, 2px, 2px;
+}
+
+.check-box {
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  color: #162c3e;
+}
+
+.check-box label input {
+  accent-color: #162c3e;
+  margin-right: 3px;
+}
+
+.form-container .btn button {
+  width: 100px;
+  height: 45px;
+  background: #162c3e;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0, 0, 10px rgba(0, 0, 0, 0.1);
+}
+.sub-container {
+  align-items: center;
+  justify-content: center;
+}
+.sub-text {
+  color: #db324d;
+}
+.footer {
+  background-color: #212122;
+  color: #a29c9b;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 20px;
+  column-gap: 40px;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #db324d;
+}
+
+.socials a i {
+  font-size: 1.5rem;
+  transition: color 0.4s ease;
+}
+
+.socials .facebook:hover i {
+  color: #1877f2;
+}
+
+.socials .twitter:hover i {
+  color: lightblue;
+}
+
+.socials .instagram:hover i {
+  color: #f15245;
+}
+
+.socials .spotify:hover i {
+  color: #1db954;
+}
+
+.socials .apple:hover i {
+  color: black;
+}
+
+.socials .soundcloud:hover i {
+  color: #ff8800;
+}
+.footer-logo img {
+  width: 50%;
+}
+
+.footer-bottom .right-reserve {
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #a29c9b;
+}
+
+.footer-bottom a {
+  font-size: 16px;
+  color: #db324d;
+  text-decoration: none;
+  opacity: 0.5;
+}
