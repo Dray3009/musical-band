@@ -33,19 +33,13 @@ Installation
 To run this project locally, follow these steps:
 
 Clone the repository:
-
-sh
-Copy code
-git clone https://github.com/yourusername/rhcp-tribute-website.git
+https://github.com/Dray3009/musical-band.git
 Navigate to the project directory:
 
-sh
-Copy code
-cd rhcp-tribute-website
+cd RedChilliPepper
 Open the project in Visual Studio Code:
 
-sh
-Copy code
+
 code .
 Open the index.html file in your preferred web browser to view the website.
 
@@ -87,6 +81,7 @@ Visual Studio Code: For being an awesome code editor.
 Feel free to reach out if you have any questions or suggestions. Enjoy the tribute website and rock on!
 
 Screenshots
+<img width="931" alt="Screenshot 2024-05-24 at 13 59 34" src="https://github.com/Dray3009/musical-band/assets/75785312/36ac887a-b0c3-4a2c-94cc-ec0a187af800">
 
 Home Page
 
@@ -97,5 +92,5 @@ Band Members Page
 Discography Page
 
 Contact
-For any inquiries, please contact us at: your-email@example.com
+For any inquiries, please contact me at: andrevassell89@gmail.com
 
