@@ -279,6 +279,33 @@ body {
   padding: 10px;
 }
 
+#Music {
+  background-color: #212122;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#Community {
+  background-color: #212122;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.commsheading {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 3px 3px 0 #db324d, -3px 3px 0 #db324d, -3px -3px 0 #db324d,
+    3px -3px 0 #db324d;
+  padding: 10px;
+}
+
 /* table  */
 
 .tables {
@@ -422,7 +449,7 @@ tr:nth-of-type(2n) {
   justify-content: center;
 }
 .sub-text {
-  color: #db324d;
+  color: #162c3e;
 }
 .footer {
   background-color: #212122;
